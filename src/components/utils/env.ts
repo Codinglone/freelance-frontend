@@ -1,1 +1,1 @@
-export const apiUrl = 'http://localhost:5000/api/v1/'
+export const apiUrl = 'https://freelance-backend-db9l.onrender.com/api/v1/'
