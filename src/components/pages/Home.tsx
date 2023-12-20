@@ -4,7 +4,7 @@ import { FrontEndEnums, backEndPoints } from '../utils/enum'
 import api from '../utils/endpointRequest'
 import { employeeType } from '../utils/types'
 import Navbar from './Navbar'
-import Background from './Background'
+// import Background from './Background'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useNavigate } from 'react-router-dom'
@@ -101,8 +101,8 @@ export default function Home () {
 
   return (
         <>
-        <div className="h-full w-full bg-mobile md:bg-black">
-        <Background/>
+        <div className="h-full w-full">
+        {/* <Background/> */}
         <Navbar/>
 
         {show

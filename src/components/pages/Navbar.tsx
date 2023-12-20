@@ -19,7 +19,7 @@ export default function Navbar () {
                 <Link className="pt-10 text-white text-xl font-Poppins hover:font-bold  hover:text-gold" to={FrontEndEnums.About}>About</Link>
                 <Link className="pt-10 text-white  text-xl font-Poppins hover:font-bold  hover:text-gold" to={FrontEndEnums.Service}>Services</Link>
                 <Link className="pt-10  text-white text-xl font-Poppins hover:font-bold  hover:text-gold" to={FrontEndEnums.Support }>Support</Link>
-                <Link className="pt-10 text-gold font-bold text-xl font-Poppins" to={FrontEndEnums.JoinCommunity }>Join our Community</Link>
+                <Link className="pt-10 text-white font-bold text-xl font-Poppins hover:text-gold" to={FrontEndEnums.JoinCommunity }>Join our Community</Link>
                 </div>
             </div>
 

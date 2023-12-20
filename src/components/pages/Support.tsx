@@ -1,16 +1,14 @@
 import React from 'react'
-import Background from './Background'
 import Navbar from './Navbar'
 
 export default function Support () {
   return (
         <>
-        <div className=" bg-mobile">
-       <Background/>
+        <div>
        <Navbar/>
        </div>
 
-            <div className="flex bg-mobile">
+            <div className="flex">
             <div className="md:relative sm:relative w-full md:mt-52 md:ml-10 ">
                 <div className='w-5/6 md:flex md:ml-7 ml-10'>
                 <div className="border-2 mt-3 md:border-2 border-gold  md:w-80 md:mr-3 p-2">

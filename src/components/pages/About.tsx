@@ -1,15 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import React from 'react'
-
 import Navbar from './Navbar'
-import Background from './Background'
 
 export default function About () {
   return (
         <>
-       <div className="h-full sm:h-fit w-full bg-mobile ">
-        <Background/>
+       <div className="h-full sm:h-fit w-full ">
          <Navbar/>
 
             <div className="md:relative sm:relative md:mt-60 sm:mt-60 md:mt-72 md: w-5/6  ml-5 text-white font-Poppins">

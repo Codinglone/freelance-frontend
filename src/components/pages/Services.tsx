@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 // import BackgroundImage from '../Images/image 1.png'
 import { FrontEndEnums, backEndPoints } from '../utils/enum'
 import Navbar from './Navbar'
-import Background from './Background'
 import api from '../utils/endpointRequest'
 import Aos from 'aos'
 import { Link } from 'react-router-dom'
@@ -41,8 +40,7 @@ export default function Services () {
 
   return (
         <>
-        <div className="h-fit  w-full bg-mobile">
-       <Background/>
+        <div className="h-fit  w-full">
        <Navbar/>
         <div className=" h-20 md:w-1/2 w-full flex flex-wrap md:ml-16 md:relative sm:relative md:mt-32 sm:mt-32">
             <div className="w-1/2"></div>
@@ -59,14 +57,14 @@ export default function Services () {
         </div>
         </div>
 
-        <div className='h-fit md:relative md:bg-black bg-mobile md:w-1/2 md:ml-14'>
+        <div className='h-fit md:relative md:w-1/2 md:ml-14'>
 
         {service.length > 0
           ? <div className='flex flex-wrap '>
            {service.map((ser: any, index) => {
              return (
                    <div key={index} className="w-full md:w-1/4 sm:w-1/4">
-                    <div className="mx-2.5 text-white bg-black border-2 border-gold h-16 grid content-center hover:border-white py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-black">
+                    <div className="mx-2.5 text-white border-2 border-gold h-16 grid content-center hover:border-white py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-black">
 
                     <Link to={`${FrontEndEnums.Teamcat}/${ser.id}` }>
                      <h5 className='text-center text-white md:pt-1 pt-2 text-xs md:text-base font-bold'>{ser.serviceName}</h5>

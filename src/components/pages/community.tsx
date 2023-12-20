@@ -7,7 +7,6 @@ import { FrontEndEnums, backEndPoints } from '../utils/enum'
 import api from '../utils/endpointRequest'
 import { communityType } from '../utils/types'
 import Navbar from './Navbar'
-import Background from './Background'
 
 export default function Community () {
   const [service, setService] = useState([])
@@ -89,8 +88,7 @@ export default function Community () {
   }
   return (
         <>
-       <div className="h-full w-full bg-mobile ">
-         <Background/>
+       <div className="h-full w-full">
          <Navbar/>
             <div className="md:relative sm:relative lg:relative sm:mt-32 md:mt-32 md:w-4/6  ml-5 text-white font-Poppins">
             {messaging
@@ -114,26 +112,26 @@ export default function Community () {
                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                             First Name
                         </label>
-                        <input {...register('firstName', { required: '* This first name is required' })} type="text" className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                        <input {...register('firstName', { required: '* This first name is required' })} type="text" className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                         <p className="text-red-500 text-xs italic">{errors.firstName && errors.firstName.message}</p>
                     </div>
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                             Last Name
                         </label>
-                        <input {...register('lastName')} type="text" required className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                        <input {...register('lastName')} type="text" required className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                     </div>
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                             Date of birth
                         </label>
-                        <input type="date" {...register('dob')} required className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                        <input type="date" {...register('dob')} required className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                     </div>
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                             Gender
                         </label>
-                        <select {...register('gender')} required className="w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" >
+                        <select {...register('gender')} required className="w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" >
                           <option value="male">Male</option>
                           <option value="male">Female</option>
                         </select>
@@ -142,20 +140,20 @@ export default function Community () {
                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                             Phone Number
                         </label>
-                        <input type="text" {...register('phone')} required className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                        <input type="text" {...register('phone')} required className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                     </div>
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                          Email
                         </label>
-                        <input {...register('email', { required: '* This email is required' })} className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                        <input {...register('email', { required: '* This email is required' })} className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                         <p className="text-red-500 text-xs italic">{errors.email && errors.email.message}</p>
                     </div>
                     <div className="w-full md:w-2/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                             PROFESSION
                         </label>
-                        <select {...register('services')} required className="text-xs w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" >
+                        <select {...register('services')} required className="text-xs w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" >
                            <option value="">Select profession</option>
                            {service.map((serv: any, index) => {
                              return (
@@ -181,7 +179,7 @@ export default function Community () {
                                     <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                                      Your Photo
                                     </label>
-                                    <input type='file' {...register('profile')} required className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                                    <input type='file' {...register('profile')} required className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                                 </div>
                             </div>
                               : <span></span>}
@@ -191,23 +189,23 @@ export default function Community () {
                                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                                             Your Cv
                                         </label>
-                                        <input type='file' {...register('cv')} required className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                                        <input type='file' {...register('cv')} required className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                                     </div>
                                     <div className='w-2/2 px-2'>
                                         <label className="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2">
                                             Diplome / certificate
                                         </label>
-                                        <input type='file' {...register('certificate')} required className="appearance-none block w-full text-white bg-black border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />
+                                        <input type='file' {...register('certificate')} required className="appearance-none block w-full text-white  border-2 border-gold hover:border-white rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />
                                     </div>
                                 </div>
                               : <span></span>}
                         </div>
                         <p className='pt-3'>Biography</p>
-                        <textarea {...register('description')} required className=' py-1 px-4 w-full text-white bg-black border-2 border-gold hover:border-white rounded-lg h-24'></textarea>
+                        <textarea {...register('description')} required className=' py-1 px-4 w-full text-white  border-2 border-gold hover:border-white rounded-lg h-24'></textarea>
                     </div>
                     <div className="w-full md:w-2/2 px-3 pt-4 mb-6 md:mb-0">
 
-                    {loading ? <input type='submit' value="Sending..." className="appearance-none block w-full text-white text-bold bg-gold hover:bg-gold cursor-pointer border-2 border-gold rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-gold" /> : <input type='submit' value="Submit" className="appearance-none block w-full text-white text-bold bg-black hover:bg-gold cursor-pointer border-2 border-gold rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-black" />}
+                    {loading ? <input type='submit' value="Sending..." className="appearance-none block w-full text-white text-bold bg-gold hover:bg-gold cursor-pointer border-2 border-gold rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-gold" /> : <input type='submit' value="Submit" className="appearance-none block w-full text-white text-bold  hover:bg-gold cursor-pointer border-2 border-gold rounded py-1 px-4 mb-3 leading-tight focus:outline-none focus:" />}
 
                     </div>
                 </div>
