@@ -1,1 +1,1 @@
-export const apiUrl = 'https://api.freelancer.rw/api/v1/'
+export const apiUrl = 'http://localhost:5000/api/v1/'
